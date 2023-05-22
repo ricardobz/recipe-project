@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   title = 'recipe-project';
+  collapsed = true;
 }
