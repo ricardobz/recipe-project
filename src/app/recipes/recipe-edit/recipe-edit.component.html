@@ -3,7 +3,13 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
-          <button class="btn btn-success" type="submit">Save</button>
+          <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="!recipeForm.valid"
+          >
+            Save
+          </button>
           <button class="btn btn-danger" type="button">Cancel</button>
         </div>
       </div>
@@ -42,13 +48,13 @@
         <div class="col-xs-12">
           <div class="form-group">
             <label for="description">Description</label>
-            <input
+            <textarea
               type="text"
               id="description"
               formControlName="description"
               class="form-control"
               rows="6"
-            />
+            ></textarea>
           </div>
         </div>
       </div>
